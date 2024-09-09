@@ -1,3 +1,3 @@
 # Customer-Churn
 
-![](intro.JPG)
+![](intro1.JPG)
