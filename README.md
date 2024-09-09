@@ -52,3 +52,13 @@ var TC = [Total Customers]
 var Churnper = DIVIDE(EC,TC)
 return Churnper
   </pre>
+
+## Model
+
+![](images/model.JPG)
+
+## Dashboard
+
+![](images/dashboard1.JPG)
+
+![](images/dashboard2.JPG)
