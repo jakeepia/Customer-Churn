@@ -1,7 +1,19 @@
-# Customer-Churn
+# Customer Churn Analysis
 
 ![](intro.JPG)
 
+## Introduction:
+This Customer Churn Analysis was developed using **Power BI** to gain insights into the customer churn behavior of a bank. The goal was to identify key patterns of churn across various customer segments, such as credit types, gender, and geographic locations, and provide actionable recommendations for reducing churn and improving retention.
+
+## Tools & Techniques Used:
+- **Tool:** Power BI
+- **Data Source:** I utilized a fact table (Bank dataset) that contained transactional and customer data, as well as dimension tables for customer demographics, credit types, and location.
+- **Data Modeling:** Relationships were established between the fact and dimension tables. A lookup (calendar) table was created for time intelligence, allowing the analysis of trends across months and years.
+- **Data Transformation (Power Query):**
+  - Removed irrelevant columns that were not essential for the analysis to optimize performance.
+  - Checked for missing values and cleaned the data to ensure accuracy.
+  - Created new columns to ensure the correct sorting of fields, such as months appearing in the correct order in visualizations.
+- **DAX Measures:** I implemented DAX (Data Analysis Expressions) to create custom measures and calculated columns. For example, I used DAX to group customers by their credit type, enabling segmentation by credit quality (poor, fair, good, very good, excellent).
 
 ## DAX Formulas Used in Creating Measures and Calculated Columns
 - Active Members:
