@@ -55,7 +55,12 @@ return Churnper
 
 - Credit Type:
 <pre>
-Credit Type = SWITCH(TRUE(), Bank_Churn[CreditScore] >= 800 && Bank_Churn[CreditScore] <= 850, "Excellent", Bank_Churn[CreditScore] >= 740 && Bank_Churn[CreditScore] <= 799, "Very Good", Bank_Churn[CreditScore] >= 670 && Bank_Churn[CreditScore] <= 739, "Good", Bank_Churn[CreditScore] >= 580 && Bank_Churn[CreditScore] <= 669, "Fair", Bank_Churn[CreditScore] >= 300 && Bank_Churn[CreditScore] <= 579, "Poor")
+Credit Type = SWITCH(TRUE(), 
+Bank_Churn[CreditScore] >= 800 && Bank_Churn[CreditScore] <= 850, "Excellent", 
+Bank_Churn[CreditScore] >= 740 && Bank_Churn[CreditScore] <= 799, "Very Good", 
+Bank_Churn[CreditScore] >= 670 && Bank_Churn[CreditScore] <= 739, "Good", 
+Bank_Churn[CreditScore] >= 580 && Bank_Churn[CreditScore] <= 669, "Fair", 
+Bank_Churn[CreditScore] >= 300 && Bank_Churn[CreditScore] <= 579, "Poor")
   </pre>
 
 ## Model
