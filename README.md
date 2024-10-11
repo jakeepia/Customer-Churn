@@ -19,25 +19,25 @@ This Customer Churn Analysis was developed using **Power BI** to gain insights i
 - **DAX Measures:** I implemented DAX (Data Analysis Expressions) to create custom measures and calculated columns. For example, I used DAX to group customers by their credit type, enabling segmentation by credit quality (poor, fair, good, very good, excellent).
 
 ## DAX
-- **_Active Members:_**
+- **Active Members:**
 
-- **_Inactive Members:_**
+- **Inactive Members:**
 
-- **_Churned Customers:_**
+- **Churned Customers:**
 
-- **_Last Month's Churned Customers:_**
+- **Last Month's Churned Customers:**
 
-- **_Credit Card Holders:_**
+- **Credit Card Holders:**
 
-- **_Non Credit Card Holders:_**
+- **Non Credit Card Holders:**
 
-- **_Total Customers:_**
+- **Total Customers:**
 
-- **_Retain Customers:_**
+- **Retain Customers:**
 
-- **_Churn %:_**
+- **Churn %:**
 
-- **_Credit Type:_**
+- **Credit Type:**
 
 ## Dashboard
 
