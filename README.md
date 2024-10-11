@@ -18,65 +18,26 @@ This Customer Churn Analysis was developed using **Power BI** to gain insights i
   - Created new columns to ensure the correct sorting of fields, such as months appearing in the correct order in visualizations.
 - **DAX Measures:** I implemented DAX (Data Analysis Expressions) to create custom measures and calculated columns. For example, I used DAX to group customers by their credit type, enabling segmentation by credit quality (poor, fair, good, very good, excellent).
 
-## DAX Formulas for Creating Measures and Calculated Columns
+## DAX
 - **_Active Members:_**
-<pre>
-Active Members = CALCULATE(COUNT(Bank_Churn[CustomerId]), 'Active customers'[ActiveCategory] = "Active Member")
-  </pre>
 
 - **_Inactive Members:_**
-<pre>
-Inactive Members = CALCULATE(COUNT(Bank_Churn[CustomerId]), 'Active customers'[ActiveCategory] = "Inactive Member")
-  </pre>
 
 - **_Churned Customers:_**
-<pre>
-Churned Customers = CALCULATE(COUNT(CustomerInfo[CustomerId]), 'Customer Exit'[ExitCategory] = "Exit")
-  </pre>
 
 - **_Last Month's Churned Customers:_**
-<pre>
-Last Month's Churned Customers = CALCULATE([Churned Customers], PREVIOUSMONTH('Calendar'[Date]))
-  </pre>
 
 - **_Credit Card Holders:_**
-<pre>
-Credit Card Holders = CALCULATE(COUNT(Bank_Churn[CustomerId]), 'Credit card'[Category] = "credit card holder")
-  </pre>
 
 - **_Non Credit Card Holders:_**
-<pre>
-Non Credit Card Holders = CALCULATE(COUNT(Bank_Churn[CustomerId]), 'Credit card'[Category] = "non credit card holder")
-  </pre>
 
 - **_Total Customers:_**
-<pre>
-Total Customers = COUNT(Bank_Churn[CustomerId])
-  </pre>  
 
 - **_Retain Customers:_**
-<pre>
-Retain Customers = [Total Customers] - [Churned Customers]
-  </pre>
 
 - **_Churn %:_**
-<pre>
-Churn % = 
-var EC = [Churned Customers]
-var TC = [Total Customers]
-var Churnper = DIVIDE(EC,TC)
-return Churnper
-  </pre>
 
 - **_Credit Type:_**
-<pre>
-Credit Type = SWITCH(TRUE(), 
-Bank_Churn[CreditScore] >= 800 && Bank_Churn[CreditScore] <= 850, "Excellent", 
-Bank_Churn[CreditScore] >= 740 && Bank_Churn[CreditScore] <= 799, "Very Good", 
-Bank_Churn[CreditScore] >= 670 && Bank_Churn[CreditScore] <= 739, "Good", 
-Bank_Churn[CreditScore] >= 580 && Bank_Churn[CreditScore] <= 669, "Fair", 
-Bank_Churn[CreditScore] >= 300 && Bank_Churn[CreditScore] <= 579, "Poor")
-  </pre>
 
 ## Dashboard
 
